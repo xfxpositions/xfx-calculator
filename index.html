@@ -1,0 +1,50 @@
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 200px 1.5fr;
+        gap: 2px;
+      }
+      .box {
+        background-color: #e4e4e4;
+        border: 1px solid black;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="box">id</div>
+      <div class="box">name</div>
+      <div class="box">salary</div>
+      <div class="ids">
+        <div class="box">10302</div>
+        <div class="box">12304</div>
+        <div class="box">09431</div>
+      </div>
+      <div class="names">
+        <div class="box">yusuf</div>
+        <div class="box">ali</div>
+        <div class="box">ayse</div>
+      </div>
+      <div class="salarys">
+        <div class="box">1200$</div>
+        <div class="box">1000$</div>
+        <div class="box">2000$</div>
+      </div>
+    </div>
+
+    <script>
+      const grid = document.querySelector(".grid");
+      console.log(grid.offsetWidth);
+      for (child of grid.children) {
+        console.log(child.offsetWidth);
+      }
+    </script>
+  </body>
+</html>
