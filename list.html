@@ -1,0 +1,78 @@
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 200px 1.5fr;
+        gap: 2px;
+      }
+      .head {
+        border-radius: 30% 70% 70% 30% / 43% 30% 70% 57%;
+      }
+      .section-2 {
+        margin-top: 2px;
+        display: grid;
+        grid-template-columns: 1fr 200px 1.5fr;
+        gap: 2px;
+      }
+      .box {
+        background-color: #e4e4e4;
+        border: 1px solid black;
+        text-align: center;
+      }
+      .box:hover {
+        background-color: #d8d3d3;
+        transition: 100ms ease-in all;
+        letter-spacing: 1px;
+      }
+
+      .rotate-left:active {
+        rotate: -5deg;
+      }
+      .rotate-right:active {
+        rotate: 5deg;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid head">
+      <div class="box head">id</div>
+      <div class="box head">name</div>
+      <div class="box head">salary</div>
+    </div>
+    <div class="section-2">
+      <div class="box">10302</div>
+      <div class="box">yusuf</div>
+      <div class="box">1200$</div>
+
+      <div class="box">12304</div>
+      <div class="box">ali</div>
+      <div class="box">1000$</div>
+
+      <div class="box">09431</div>
+      <div class="box">ayse</div>
+      <div class="box">2000$</div>
+    </div>
+
+    <script>
+      const boxes = document.querySelectorAll(".box");
+      function click(event) {
+        const elem = event.target;
+        console.log(event.x - elem.offsetLeft > elem.offsetWidth / 2);
+        if (event.x - elem.offsetLeft > elem.offsetWidth / 2) {
+          elem.classList.add("rotate-right");
+        } else {
+          elem.classList.add("rotate-left");
+        }
+      }
+      for (box of boxes) {
+        box.addEventListener("mousedown", click);
+      }
+      console.log(boxes);
+    </script>
+  </body>
+</html>

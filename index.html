@@ -1,50 +1,35 @@
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>css</title>
-    <style>
-      .grid {
-        display: grid;
-        grid-template-columns: 1fr 200px 1.5fr;
-        gap: 2px;
-      }
-      .box {
-        background-color: #e4e4e4;
-        border: 1px solid black;
-        text-align: center;
-      }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index/ocean.css" />
+    <link rel="stylesheet" href="css/index/style.css" />
+    <link rel="stylesheet" href="css/index/stars.css" />
   </head>
   <body>
-    <div class="grid">
-      <div class="box">id</div>
-      <div class="box">name</div>
-      <div class="box">salary</div>
-      <div class="ids">
-        <div class="box">10302</div>
-        <div class="box">12304</div>
-        <div class="box">09431</div>
+    <!-- <div class="ocean">
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div> -->
+    <div class="container">
+      <div>
+        <nav>
+          <span><h1>XfxPositions</h1></span>
+          <a class="link" href="/download">Download</a>
+          <a class="link" href="/source">Source Code</a>
+        </nav>
+        <h1 class="heading-desc">
+          Fully Port of Macos Calculator For Windows and Linux based Electron
+        </h1>
       </div>
-      <div class="names">
-        <div class="box">yusuf</div>
-        <div class="box">ali</div>
-        <div class="box">ayse</div>
-      </div>
-      <div class="salarys">
-        <div class="box">1200$</div>
-        <div class="box">1000$</div>
-        <div class="box">2000$</div>
+      <div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
       </div>
     </div>
-
-    <script>
-      const grid = document.querySelector(".grid");
-      console.log(grid.offsetWidth);
-      for (child of grid.children) {
-        console.log(child.offsetWidth);
-      }
-    </script>
   </body>
 </html>
